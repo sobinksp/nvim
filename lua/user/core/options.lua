@@ -23,7 +23,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapig
-opt.wrap = false
+opt.wrap = true
 
 -- search settings
 opt.ignorecase = true
