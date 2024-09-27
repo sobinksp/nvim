@@ -44,4 +44,7 @@ opt.splitright = true -- split verticle window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 -- visible line around cursor
-opt.scrolloff = 4
+opt.scrolloff = 0
+
+-- cursor style
+-- vim.opt.guicursor = ""
