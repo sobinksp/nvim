@@ -12,6 +12,17 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap -- for conciseness
+
+		function YankDiagnosticError()
+			vim.diagnostic.open_float()
+			vim.diagnostic.open_float()
+			local win_id = vim.fn.win_getid()
+			vim.cmd("normal! j")
+			vim.cmd("normal! VG")
+			vim.cmd("normal! y")
+			vim.api.nvim_win_close(win_id, true)
+		end
+
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)
@@ -58,6 +69,8 @@ return {
 
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+				keymap.set("n", "<leader>cd", [[:lua YankDiagnosticError()<CR>]], { noremap = true })
 			end,
 		})
 
