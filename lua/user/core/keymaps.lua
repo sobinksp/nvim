@@ -52,6 +52,9 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 
+-- map go to next and prev buffer
+keymap.set("n", "[b", ":bprev<CR>", { silent = true })
+keymap.set("n", "]b", ":bnext<CR>", { silent = true })
 -- emacs like find files
 keymap.set("n", "<leader>fd", "", {
 	noremap = true,
