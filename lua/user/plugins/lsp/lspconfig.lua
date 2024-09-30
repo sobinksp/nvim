@@ -70,7 +70,7 @@ return {
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
-				keymap.set("n", "<leader>cd", [[:lua YankDiagnosticError()<CR>]], { noremap = true })
+				keymap.set("n", "<leader>cd", [[:lua YankDiagnosticError()<CR>]], { noremap = true, silent = true })
 			end,
 		})
 
