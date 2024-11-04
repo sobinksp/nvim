@@ -4,9 +4,9 @@ return {
 	-- "Tsuzat/NeoSolarized.nvim",
 	-- "ellisonleao/gruvbox.nvim",
 	-- "p00f/alabaster.nvim",
-	-- "ishan9299/nvim-solarized-lua",
+	"ishan9299/nvim-solarized-lua",
 	-- "aktersnurra/no-clown-fiesta.nvim",
-	"NTBBloodbath/doom-one.nvim",
+	-- "NTBBloodbath/doom-one.nvim",
 	lazy = false,
 	priority = 1000,
 
@@ -36,7 +36,11 @@ return {
 	-- 	-- vim.cmd([[colorscheme no-clown-fiesta]])
 	-- 	vim.cmd([[colorscheme doom-one]])
 	-- end,
+	-- config = function()
+	-- 	vim.cmd.colorscheme("doom-one")
+	-- end,
 	config = function()
-		vim.cmd.colorscheme("doom-one")
+		vim.g.solarized_italics = 0
+		vim.cmd.colorscheme("solarized")
 	end,
 }
