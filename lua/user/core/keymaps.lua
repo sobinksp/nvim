@@ -10,6 +10,9 @@ keymap.set("n", "<C-e>", "j<C-e>")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+keymap.set("n", "j", "gj", { noremap = true })
+keymap.set("n", "k", "gk", { noremap = true })
+
 -- highlight
 keymap.set("n", "<leader>h", ":nohl<CR>") -- clear highlight
 
