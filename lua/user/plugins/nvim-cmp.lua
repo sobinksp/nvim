@@ -25,6 +25,7 @@ return {
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
+			enabled = false,
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
 			},

@@ -37,7 +37,8 @@ opt.backspace = "indent,eol,start"
 
 -- termguicolors enable for colorscheme
 opt.termguicolors = true
-opt.signcolumn = "yes"
+-- opt.signcolumn = "yes"
+opt.signcolumn = "yes:1"
 
 -- split windows
 opt.splitright = true -- split verticle window to the right
