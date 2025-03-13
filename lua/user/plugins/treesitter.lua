@@ -8,9 +8,8 @@ return {
 		treesitter.setup({
 			auto_install = true,
 			highlight = {
-				-- enable = true,
-				enable = false,
-				-- disable = { "lua", "rust" },
+				enable = true,
+				-- enable = false,
 			},
 			indent = {
 				enable = true,

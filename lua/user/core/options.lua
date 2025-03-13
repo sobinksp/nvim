@@ -51,3 +51,7 @@ opt.scrolloff = 0
 opt.cursorline = true
 -- cursor style
 -- vim.opt.guicursor = ""
+
+opt.syntax = "enable"
+
+vim.highlight.priorities.semantic_tokens = 95
