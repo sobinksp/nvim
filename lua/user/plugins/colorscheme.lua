@@ -85,7 +85,7 @@ return {
 			base0E = keyword2,
 			base0F = text,
 		})
-		-- vim.api.nvim_set_hl(0, "@comment", { fg = comment, italic = false })
+		vim.api.nvim_set_hl(0, "@comment", { fg = comment, italic = false })
 		-- vim.api.nvim_set_hl(0, "@function.builtin", { fg = "NONE", bold = false, italic = false })
 		-- vim.api.nvim_set_hl(0, "Keyword", { fg = "NONE", bold = false, italic = false })
 	end,
