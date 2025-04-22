@@ -55,3 +55,5 @@ opt.cursorline = true
 opt.syntax = "enable"
 
 vim.highlight.priorities.semantic_tokens = 95
+
+opt.shortmess = "a"
