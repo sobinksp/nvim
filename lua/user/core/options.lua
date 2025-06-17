@@ -16,9 +16,9 @@ vim.cmd("let g:netrw_liststyle = 3")
 
 -- tabs & indentation
 -- tabstop=2 softtabstop=0 shiftwidth=2 expandtab
-opt.tabstop = 2
-opt.softtabstop = 0
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 

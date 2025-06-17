@@ -27,7 +27,9 @@ return {
 				graphql = { "prettier" },
 				liquid = { "prettier" },
 				lua = { "stylua" },
-				python = { "isort", "black" },
+				python = {},
+				go = { "gofmt" },
+				-- python = { "isort", "black" },
 				c = {},
 			},
 			-- format_on_save = {
