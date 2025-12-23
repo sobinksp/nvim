@@ -11,11 +11,18 @@ return {
 		local actions = require("telescope.actions")
 
 		telescope.setup({
+			pickers = {
+				find_files = {
+					-- no_ignore = true, -- ignore .gitignore
+					-- hidden = true, -- include dotfiles
+				},
+			},
 			path_display = { "smart" },
 			defaults = {
 				file_ignore_patterns = {
 					"node_modules",
 					".git/",
+					"dist",
 				},
 				mappings = {
 					i = {
