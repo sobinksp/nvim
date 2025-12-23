@@ -26,6 +26,10 @@ keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger v
 keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
 keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
 keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]])
+keymap.set("n", "<leader>wwh", "<C-w>H") -- rotate window
+keymap.set("n", "<leader>wwj", "<C-w>J") -- rotate window
+keymap.set("n", "<leader>wwk", "<C-w>K") -- rotate window
+keymap.set("n", "<leader>wwl", "<C-w>L") -- rotate window
 
 -- tab managemet
 keymap.set("n", "[t", "<cmd>tabp<CR>") -- go to previous tab
