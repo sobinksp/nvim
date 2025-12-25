@@ -41,8 +41,8 @@ opt.termguicolors = true
 opt.signcolumn = "yes:1"
 
 -- split windows
-opt.splitright = true -- split verticle window to the right
-opt.splitbelow = true -- split horizontal window to the bottom
+-- opt.splitright = true -- split verticle window to the right
+-- opt.splitbelow = true -- split horizontal window to the bottom
 
 -- visible line around cursor
 opt.scrolloff = 0

@@ -1,23 +1,7 @@
 -- return {
--- 	"ellisonleao/gruvbox.nvim",
+-- 	"https://github.com/RRethy/base16-nvim",
 -- 	lazy = false,
 -- 	priority = 1000,
--- 	config = function()
--- 		-- vim.opt.termguicolors = true
--- 		require("gruvbox").setup({
--- 			italic = {
--- 				strings = false,
--- 				emphasis = false,
--- 				comments = false,
--- 				operators = false,
--- 				folds = false,
--- 			},
--- 		})
--- 		vim.cmd("colorscheme gruvbox")
--- 	end,
--- }
--- return {
--- 	"https://github.com/RRethy/base16-nvim",
 -- 	config = function()
 -- 		local bg = "#0F1919"
 -- 		local accent = "#102121"
@@ -54,50 +38,64 @@
 -- 		})
 -- 	end,
 -- }
+
+-- return {
+-- 	-- "p00f/alabaster.nvim",
+-- 	"jpwol/thorn.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+--
+-- 	config = function()
+-- 		require("thorn").setup({
+-- 			theme = nil, -- 'light' or 'dark' - defaults to vim.o.background if unset
+-- 			background = "warm", -- options are 'warm' and 'cold'
+--
+-- 			transparent = false, -- transparent background
+-- 			terminal = true, -- terminal colors
+--
+-- 			styles = {
+-- 				keywords = { italic = false, bold = false },
+-- 				comments = { italic = false, bold = false },
+-- 				strings = { italic = false, bold = false },
+--
+-- 				diagnostic = {
+-- 					underline = true, -- if true, flat underlines will be used. Otherwise, undercurls will be used
+--
+-- 					-- true will apply the bg highlight, false applies the fg highlight
+-- 					error = { highlight = true },
+-- 					hint = { highlight = false },
+-- 					info = { highlight = false },
+-- 					warn = { highlight = false },
+-- 				},
+-- 			},
+--
+-- 			on_highlights = function(hl, palette) end, -- apply your own highlights
+-- 		})
+-- 		vim.cmd("colorscheme thorn")
+-- 	end,
+-- }
+
 return {
-	"p00f/alabaster.nvim",
-	-- "jpwol/thorn.nvim",
+	-- "p00f/alabaster.nvim",
+	"aktersnurra/no-clown-fiesta.nvim",
+
 	lazy = false,
 	priority = 1000,
 
 	config = function()
-		vim.cmd("colorscheme alabaster")
-
-		-- Strong bracket match highlight
-		-- vim.api.nvim_set_hl(0, "MatchParen", {
-		-- 	bg = "#444444", -- background color
-		-- 	fg = "#ffffff", -- foreground color
-		-- 	bold = true,
-		-- })
+		vim.cmd([[colorscheme no-clown-fiesta]])
 		vim.api.nvim_set_hl(0, "MatchParen", {
 			bg = "#5f5f5f",
 		})
-
-		-- require("thorn").setup({
-		-- 	theme = nil, -- 'light' or 'dark' - defaults to vim.o.background if unset
-		-- 	background = "warm", -- options are 'warm' and 'cold'
-		--
-		-- 	transparent = false, -- transparent background
-		-- 	terminal = true, -- terminal colors
-		--
-		-- 	styles = {
-		-- 		keywords = { italic = false, bold = false },
-		-- 		comments = { italic = false, bold = false },
-		-- 		strings = { italic = false, bold = false },
-		--
-		-- 		diagnostic = {
-		-- 			underline = true, -- if true, flat underlines will be used. Otherwise, undercurls will be used
-		--
-		-- 			-- true will apply the bg highlight, false applies the fg highlight
-		-- 			error = { highlight = true },
-		-- 			hint = { highlight = false },
-		-- 			info = { highlight = false },
-		-- 			warn = { highlight = false },
-		-- 		},
-		-- 	},
-		--
-		-- 	on_highlights = function(hl, palette) end, -- apply your own highlights
-		-- })
-		-- vim.cmd("colorscheme thorn")
 	end,
 }
+
+-- return {
+-- 	"lifepillar/vim-solarized8",
+-- 	lazy = false,
+-- 	priority = 1000,
+--
+-- 	config = function()
+-- 		vim.cmd([[colorscheme solarized8]])
+-- 	end,
+-- }

@@ -30,6 +30,7 @@ keymap.set("n", "<leader>wwh", "<C-w>H") -- rotate window
 keymap.set("n", "<leader>wwj", "<C-w>J") -- rotate window
 keymap.set("n", "<leader>wwk", "<C-w>K") -- rotate window
 keymap.set("n", "<leader>wwl", "<C-w>L") -- rotate window
+keymap.set("n", "<leader>wo", "<cmd>only<CR>") -- only
 
 -- tab managemet
 keymap.set("n", "[t", "<cmd>tabp<CR>") -- go to previous tab
