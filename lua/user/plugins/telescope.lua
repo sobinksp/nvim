@@ -12,6 +12,16 @@ return {
 
 		telescope.setup({
 			pickers = {
+				buffers = {
+					mappings = {
+						i = {
+							["<C-x>"] = actions.delete_buffer,
+						},
+						n = {
+							["dd"] = actions.delete_buffer,
+						},
+					},
+				},
 				find_files = {
 					-- no_ignore = true, -- ignore .gitignore
 					-- hidden = true, -- include dotfiles
@@ -28,6 +38,7 @@ return {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
 						["<C-j>"] = actions.move_selection_next, -- move to next result
+						["<C-d>"] = actions.delete_buffer,
 						-- ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
