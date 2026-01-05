@@ -4,6 +4,9 @@ return {
 	config = function()
 		require("oil").setup({
 			keymaps = {
+				["<C-h>"] = false,
+				["<C-l>"] = false,
+				["<C-r>"] = "actions.refresh",
 				-- 	["yp"] = {
 				-- 		desc = "Copy filepath to system clipboard",
 				-- 		callback = function()
