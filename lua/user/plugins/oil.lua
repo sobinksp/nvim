@@ -12,34 +12,34 @@ return {
 				-- 		end,
 				-- 	},
 				-- },
-				["yp"] = {
-					desc = "Copy relative filepath to system clipboard",
-					callback = function()
-						local oil = require("oil")
-						local entry = oil.get_cursor_entry()
-						if not entry then
-							return
-						end
-
-						-- Oil buffer directory
-						local dir = oil.get_current_dir()
-
-						-- Absolute path
-						local abs_path = dir .. entry.name
-
-						-- Relative to cwd
-						local rel_path = vim.fn.fnamemodify(abs_path, ":.")
-
-						vim.fn.setreg("+", rel_path)
-						vim.notify("Copied: " .. rel_path, vim.log.levels.INFO)
-					end,
-				},
+				-- ["yp"] = {
+				-- 	desc = "Copy relative filepath to system clipboard",
+				-- 	callback = function()
+				-- 		local oil = require("oil")
+				-- 		local entry = oil.get_cursor_entry()
+				-- 		if not entry then
+				-- 			return
+				-- 		end
+				--
+				-- 		-- Oil buffer directory
+				-- 		local dir = oil.get_current_dir()
+				--
+				-- 		-- Absolute path
+				-- 		local abs_path = dir .. entry.name
+				--
+				-- 		-- Relative to cwd
+				-- 		local rel_path = vim.fn.fnamemodify(abs_path, ":.")
+				--
+				-- 		vim.fn.setreg("+", rel_path)
+				-- 		vim.notify("Copied: " .. rel_path, vim.log.levels.INFO)
+				-- 	end,
+				-- },
 			},
 			columns = {
 				-- "icon", --  remove icon
-				"permissions",
-				"size",
-				"mtime",
+				-- "permissions",
+				-- "size",
+				-- "mtime",
 			},
 			view_options = {
 				show_hidden = true,
