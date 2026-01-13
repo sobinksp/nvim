@@ -87,6 +87,10 @@ return {
 		vim.api.nvim_set_hl(0, "MatchParen", {
 			bg = "#5f5f5f",
 		})
+		vim.api.nvim_set_hl(0, "Comment", {
+			fg = "#4ED53E", -- light yellow (adjust if needed)
+			-- italic = true, -- optional
+		})
 	end,
 }
 
