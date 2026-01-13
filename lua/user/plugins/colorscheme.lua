@@ -83,14 +83,18 @@ return {
 	priority = 1000,
 
 	config = function()
+		local a = 3
 		vim.cmd([[colorscheme no-clown-fiesta]])
 		vim.api.nvim_set_hl(0, "MatchParen", {
 			bg = "#5f5f5f",
 		})
 		vim.api.nvim_set_hl(0, "Comment", {
-			fg = "#4ED53E", -- light yellow (adjust if needed)
+			fg = "#4ED53E",
 			-- italic = true, -- optional
 		})
+		vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg = "#5f5f5f" })
+		-- Additional common groups for unused code
+		vim.api.nvim_set_hl(0, "@lsp.mod.unused", { fg = "#5f5f5f" })
 	end,
 }
 
