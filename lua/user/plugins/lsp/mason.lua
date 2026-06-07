@@ -1,8 +1,12 @@
 return {
 	"williamboman/mason.nvim",
+	-- Pin to 1.x: mason 2.x / mason-lspconfig 2.x require Neovim 0.11+
+	-- (they call vim.lsp.enable, which is nil on 0.10).
+	version = "^1.0.0",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		{ "williamboman/mason-lspconfig.nvim", version = "^1.0.0" },
+		-- pinned to last commit compatible with mason 1.x
+		{ "WhoIsSethDaniel/mason-tool-installer.nvim", commit = "c5e07b8ff54187716334d585db34282e46fa2932" },
 	},
 	config = function()
 		local mason = require("mason")

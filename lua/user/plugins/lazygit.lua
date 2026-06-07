@@ -1,6 +1,10 @@
 -- nvim v0.8.0
 return {
 	"kdheepak/lazygit.nvim",
+	-- Pinned to the last commit that renders correctly on Neovim 0.10.
+	-- Newer commits (e.g. #158 window-sizing) blank the floating terminal on 0.10;
+	-- they work on 0.11+. Unpin this if/when you upgrade Neovim.
+	commit = "2432b447483f42ff2e18b2d392cb2bb27e495c08",
 	cmd = {
 		"LazyGit",
 		"LazyGitConfig",

@@ -1,6 +1,9 @@
 -- This config is copied from Josean Martinez
 return {
 	"neovim/nvim-lspconfig",
+	-- Pin to 1.x: 2.x+ uses the Nvim 0.11 native vim.lsp.config flow and
+	-- deprecates the classic require("lspconfig").<server>.setup{} API used below.
+	version = "^1.0.0",
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 	-- event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
