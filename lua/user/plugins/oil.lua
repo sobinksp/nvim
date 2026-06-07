@@ -7,6 +7,19 @@ return {
 				["<C-h>"] = false,
 				["<C-l>"] = false,
 				["<C-r>"] = "actions.refresh",
+				["-"] = {
+					desc = "Go to parent directory (bounded at project root)",
+					callback = function()
+						local oil = require("oil")
+						local dir = vim.fn.fnamemodify(oil.get_current_dir(), ":p")
+						local root = vim.fn.fnamemodify(vim.fn.getcwd(), ":p")
+						if dir == root then
+							vim.notify("Already at project root", vim.log.levels.INFO)
+							return
+						end
+						require("oil.actions").parent.callback()
+					end,
+				},
 				-- 	["yp"] = {
 				-- 		desc = "Copy filepath to system clipboard",
 				-- 		callback = function()

@@ -17,4 +17,7 @@ return {
 	keys = {
 		{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
 	},
+	-- config = function()
+	-- 	vim.g.lazygit_floating_window_winblend = 10
+	-- end,
 }

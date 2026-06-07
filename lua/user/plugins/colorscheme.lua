@@ -75,35 +75,156 @@
 -- 	end,
 -- }
 
-return {
-	-- "p00f/alabaster.nvim",
-	"aktersnurra/no-clown-fiesta.nvim",
-
-	lazy = false,
-	priority = 1000,
-
-	config = function()
-		local a = 3
-		vim.cmd([[colorscheme no-clown-fiesta]])
-		vim.api.nvim_set_hl(0, "MatchParen", {
-			bg = "#5f5f5f",
-		})
-		vim.api.nvim_set_hl(0, "Comment", {
-			fg = "#4ED53E",
-			-- italic = true, -- optional
-		})
-		vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg = "#5f5f5f" })
-		-- Additional common groups for unused code
-		vim.api.nvim_set_hl(0, "@lsp.mod.unused", { fg = "#5f5f5f" })
-	end,
-}
-
 -- return {
--- 	"lifepillar/vim-solarized8",
+-- 	-- "p00f/alabaster.nvim",
+-- 	"aktersnurra/no-clown-fiesta.nvim",
+--
 -- 	lazy = false,
 -- 	priority = 1000,
 --
 -- 	config = function()
--- 		vim.cmd([[colorscheme solarized8]])
+-- 		local a = 3
+-- 		vim.cmd([[colorscheme no-clown-fiesta]])
+-- 		vim.api.nvim_set_hl(0, "MatchParen", {
+-- 			bg = "#5f5f5f",
+-- 		})
+-- 		vim.api.nvim_set_hl(0, "Comment", {
+-- 			fg = "#4ED53E",
+-- 			-- italic = true, -- optional
+-- 		})
+-- 		vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg = "#5f5f5f" })
+-- 		-- Additional common groups for unused code
+-- 		vim.api.nvim_set_hl(0, "@lsp.mod.unused", { fg = "#5f5f5f" })
 -- 	end,
 -- }
+
+-- return {
+-- 	"https://github.com/rebelot/kanagawa.nvim.git",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("kanagawa").setup({
+-- 			commentStyle = { italic = false },
+-- 			keywordStyle = { italic = false },
+-- 			statementStyle = { bold = false },
+-- 			colors = {
+-- 				palette = {
+-- 					-- change all usages of these colors
+-- 					dragonBlue2 = "#E4EEDA",
+-- 					dragonGreen = "#71855b",
+-- 					dragonGreen2 = "#8FAE7F",
+--
+-- 					dragonWhite = "#999A99",
+-- 				},
+-- 			},
+-- 		})
+-- 		vim.cmd("colorscheme kanagawa-dragon")
+-- 		vim.api.nvim_set_hl(0, "MatchParen", {
+-- 			bg = "#5f5f5f",
+-- 		})
+-- 	end,
+-- }
+-- return {
+-- 	"shawilly/fallout.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("fallout").setup({
+-- 			styles = {
+-- 				comments = { italic = false },
+-- 				keywords = { bold = true },
+-- 				functions = {},
+-- 				variables = {},
+-- 			},
+-- 		})
+-- 		vim.cmd.colorscheme("fallout")
+-- 	end,
+-- }
+
+-- return {
+-- 	"https://github.com/RRethy/base16-nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("base16-colorscheme").setup({
+--
+-- 			-- UI
+-- 			base00 = "#070807", -- background (not pure black for better contrast)
+-- 			base01 = "#0b0f0c",
+-- 			base02 = "#141a16",
+-- 			base03 = "#2c342e", -- comments
+-- 			base04 = "#4b544d",
+-- 			base05 = "#7a847b", -- main text (slightly brighter)
+-- 			base06 = "#909a91",
+-- 			base07 = "#a6afa8",
+--
+-- 			-- Syntax
+-- 			base08 = "#7a847b", -- variables
+-- 			base09 = "#909a91", -- numbers
+-- 			base0A = "#879188", -- types
+-- 			base0B = "#3e5d3f", -- strings
+-- 			base0C = "#6e7870", -- constants
+-- 			base0D = "#9ea9a0", -- functions
+-- 			base0E = "#5c8c1f", -- keywords
+-- 			base0F = "#59635b", -- specials
+-- 		})
+--
+-- 		vim.cmd([[
+--       highlight CursorLine guibg=#0b0f0c
+--       highlight LineNr guifg=#2c342e
+--       highlight CursorLineNr guifg=#7a847b
+--     ]])
+--
+-- 		-- Treesitter overrides
+-- 		vim.api.nvim_set_hl(0, "@string", { fg = "#3e5d3f" })
+-- 		vim.api.nvim_set_hl(0, "@keyword", { fg = "#5c8c1f", italic = false })
+-- 		vim.api.nvim_set_hl(0, "@comment", { fg = "#2c342e", italic = false })
+-- 		vim.api.nvim_set_hl(0, "@type", { italic = false })
+-- 		vim.api.nvim_set_hl(0, "@function.builtin", { italic = false })
+-- 	end,
+-- }
+return {
+	"https://github.com/RRethy/base16-nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		require("base16-colorscheme").setup({
+			-- UI
+			base00 = "#0f120f", -- background (lifted from #070807)
+			base01 = "#171c18",
+			base02 = "#1f2621",
+			base03 = "#3e4840", -- comments (was #2c342e)
+			base04 = "#5f6a61",
+			-- base05 = "#96a098", -- main text (was #7a847b)
+			-- base05 = "#969E93", -- main text (was #7a847b)
+			base05 = "#889085", -- main text
+			base06 = "#adb6ae",
+			base07 = "#c4ccc6",
+			-- Syntax
+			base08 = "#96a098", -- variables
+			base09 = "#adb6ae", -- numbers
+			base0A = "#a3b0a6", -- types
+			base0B = "#5a8a5c", -- strings (was #3e5d3f)
+			base0C = "#8a958c", -- constants
+			-- base0D = "#b8c4ba", -- functions (was #9ea9a0)
+			base0D = "#CFE1D2",
+			-- base0D = "#FF0000", -- functions (was #9ea9a0)
+			base0E = "#78ac2e", -- keywords (was #5c8c1f)
+			base0F = "#748676", -- specials
+		})
+		vim.cmd([[
+      highlight CursorLine guibg=#171c18
+      highlight LineNr guifg=#3e4840
+      highlight CursorLineNr guifg=#96a098
+    ]])
+		-- Treesitter overrides
+		vim.api.nvim_set_hl(0, "@string", { fg = "#5a8a5c" })
+		vim.api.nvim_set_hl(0, "@keyword", { fg = "#78ac2e", italic = false })
+		vim.api.nvim_set_hl(0, "@comment", { fg = "#3e4840", italic = false })
+		vim.api.nvim_set_hl(0, "@type", { italic = false })
+		vim.api.nvim_set_hl(0, "@function.builtin", { italic = false })
+		vim.api.nvim_set_hl(0, "@boolean", { fg = "#72D475" }) -- or whatever color you want
+		vim.api.nvim_set_hl(0, "@type.builtin", { italic = false }) -- FIX for int
+		vim.api.nvim_set_hl(0, "@keyword.type", { italic = false }) -- sometimes used
+	end,
+}

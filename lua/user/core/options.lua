@@ -1,4 +1,5 @@
 local opt = vim.opt
+local api = vim.api
 
 -- disable swap file
 opt.swapfile = true
@@ -6,7 +7,8 @@ opt.shortmess = "A"
 
 -- line number
 opt.relativenumber = false
-opt.number = true
+-- opt.number = true
+opt.number = false
 
 -- disable auto comment on new line
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
@@ -41,8 +43,8 @@ opt.termguicolors = true
 opt.signcolumn = "yes:1"
 
 -- split windows
--- opt.splitright = true -- split verticle window to the right
--- opt.splitbelow = true -- split horizontal window to the bottom
+opt.splitright = true -- split verticle window to the right
+opt.splitbelow = true -- split horizontal window to the bottom
 
 -- visible line around cursor
 opt.scrolloff = 0
@@ -59,3 +61,20 @@ vim.highlight.priorities.semantic_tokens = 95
 -- opt.shortmess = "a"
 opt.shortmess = "aFWItc"
 -- opt.cmdheight = 2
+
+-- opt.guicursor = {
+-- 	"n-v-c:block", -- normal/visual/command: solid block
+-- 	-- "i:block", -- insert: block (we'll style it via highlight)
+-- 	"i:block-UserInsertCursor", -- Use a custom highlight group here
+-- 	"r:hor20", -- replace
+-- 	"o:hor50",
+-- }
+--
+-- opt.guicursor = "v-c-i:block-Cursor"
+opt.guicursor = "n:block-UserNormalCursor,v-c:block-Cursor,i:block-UserInsertCursor"
+api.nvim_set_hl(0, "UserInsertCursor", { fg = "#0A0F09", bg = "#FFFFFF" })
+api.nvim_set_hl(0, "UserNormalCursor", { fg = "#0A0F09", bg = "#EBD26E" })
+-- vim.opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50"
+-- Define the highlight color for the cursor
+-- vim.api.nvim_set_hl(0, "Cursor", { bg = "steelblue", fg = "white" })
+-- vim.api.nvim_set_hl(0, "iCursor", { bg = "steelblue", fg = "white" })
