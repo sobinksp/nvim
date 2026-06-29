@@ -72,8 +72,8 @@ opt.shortmess = "aFWItc"
 --
 -- opt.guicursor = "v-c-i:block-Cursor"
 opt.guicursor = "n:block-UserNormalCursor,v-c:block-Cursor,i:block-UserInsertCursor"
-api.nvim_set_hl(0, "UserInsertCursor", { fg = "#0A0F09", bg = "#FFFFFF" })
-api.nvim_set_hl(0, "UserNormalCursor", { fg = "#0A0F09", bg = "#EBD26E" })
+-- UserNormalCursor / UserInsertCursor highlights are defined in
+-- plugins/colorscheme.lua (after the colorscheme's `hi clear`).
 -- vim.opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50"
 -- Define the highlight color for the cursor
 -- vim.api.nvim_set_hl(0, "Cursor", { bg = "steelblue", fg = "white" })
