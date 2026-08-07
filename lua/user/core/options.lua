@@ -78,3 +78,4 @@ opt.guicursor = "n:block-UserNormalCursor,v-c:block-Cursor,i:block-UserInsertCur
 -- Define the highlight color for the cursor
 -- vim.api.nvim_set_hl(0, "Cursor", { bg = "steelblue", fg = "white" })
 -- vim.api.nvim_set_hl(0, "iCursor", { bg = "steelblue", fg = "white" })
+opt.exrc = true
